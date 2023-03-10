@@ -1,6 +1,11 @@
 package services;
 
-public class AdditionalInformationService {
+import entities.AdditionalInformation;
 
-    private int id;
+public class AdditionalInformationService extends AdditionalInformation {
+
+
+    public AdditionalInformationService(int id, String additionalInformation) {
+        super(id, additionalInformation);
+    }
 }

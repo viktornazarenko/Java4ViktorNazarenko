@@ -1,6 +1,11 @@
 package services;
 
-public class HomeworkService {
+import entities.Homework;
 
-    private int id;
+public class HomeworkService extends Homework {
+
+
+    public HomeworkService(int id, String homework) {
+        super(id, homework);
+    }
 }

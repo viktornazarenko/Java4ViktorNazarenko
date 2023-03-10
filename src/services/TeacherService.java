@@ -1,10 +1,10 @@
 package services;
 
-public class TeacherService {
+import entities.Teacher;
 
-    private int id;
-    protected String firstName;
-    protected String lastName;
-    protected String courseName;
+public class TeacherService extends Teacher {
 
+    public TeacherService(int id, String firstName, String lastName, String courseName) {
+        super(id, firstName, lastName, courseName);
+    }
 }
