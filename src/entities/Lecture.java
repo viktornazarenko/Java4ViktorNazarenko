@@ -4,15 +4,18 @@ public class Lecture {
 
     private int id;
 
-    protected String courseName;
+    public int courseId;
 
-    protected static int count = 0;
+    public String courseName;
 
-    public Lecture (int id, String courseName) {
+    public static int count = 0;
+
+
+    public Lecture(int id, int courseId) {
         this.id = id;
-        this.courseName = courseName;
+        this.courseId = Course.courseId;
+        this.courseName = Course.courseName;
         count ++;
     }
-
 
 }
