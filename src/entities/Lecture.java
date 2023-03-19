@@ -11,11 +11,50 @@ public class Lecture {
     public static int count = 0;
 
 
-    public Lecture(int id, int courseId) {
-        this.id = id;
-        this.courseId = Course.courseId;
-        this.courseName = Course.courseName;
+    public Lecture() {
+        setId(id);
+        courseId = Course.getCourseId();
+        this.courseName = Course.getCourseName();
         count ++;
     }
 
+
+
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getCourseId() {
+        return courseId;
+    }
+
+    public void setCourseId(int courseId) {
+        this.courseId = courseId;
+    }
+
+    public String getCourseName() {
+        return courseName;
+    }
+
+    public void setCourseName(String courseName) {
+        this.courseName = courseName;
+    }
+
+    public static int getCount() {
+        return count;
+    }
+
+    @Override
+    public String toString() {
+        return "Lecture{" +
+                "id=" + id +
+                ", courseId=" + courseId +
+                ", courseName='" + courseName + '\'' +
+                '}';
+    }
 }

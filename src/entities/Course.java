@@ -2,12 +2,34 @@ package entities;
 
 public class Course {
 
-    static public int courseId;
+    private static int courseId;
 
-    static public String courseName;
+    public static String courseName;
+
+    public String teacherName;
+
+    public String studentName;
 
     public Course(int courseId, String courseName) {
-        Course.courseId = courseId;
+        Course.setCourseId(courseId);
+        Course.setCourseName(courseName);
+        this.teacherName = teacherName;
+        this.studentName = studentName;
+    }
+
+    public static int getCourseId() {
+        return courseId;
+    }
+
+    public static void setCourseId(int courseId) {
+        Course.courseId = Course.courseId;
+    }
+
+    public static String getCourseName() {
+        return courseName;
+    }
+
+    public static void setCourseName(String courseName) {
         Course.courseName = courseName;
     }
 }
