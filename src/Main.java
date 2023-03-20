@@ -36,8 +36,6 @@ public class Main {
 
         int choice = scanner.nextInt();
 
-
-
         do {
 
             if (choice < 1 || choice > 5){
@@ -46,6 +44,7 @@ public class Main {
                 System.out.println("3. Students");
                 System.out.println("4. Lectures");
                 System.out.println("5. Exit");
+                scanner.next();
             }
 
             if (choice == 5){
