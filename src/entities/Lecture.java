@@ -4,17 +4,18 @@ public class Lecture {
 
     private int id;
 
-    public int courseId;
+    private int courseId;
 
-    public String courseName;
+    private String courseName;
+
 
     public static int count = 0;
 
 
     public Lecture() {
         setId(id);
-        courseId = Course.getCourseId();
-        this.courseName = Course.getCourseName();
+        setCourseId(courseId);
+        setCourseName(courseName);
         count ++;
     }
 

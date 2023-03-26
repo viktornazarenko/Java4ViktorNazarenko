@@ -2,34 +2,50 @@ package entities;
 
 public class Course {
 
-    private static int courseId;
+    private int courseId;
 
-    public static String courseName;
+    private String courseName;
 
-    public String teacherName;
+    private String teacherName;
 
-    public String studentName;
+    private String studentName;
 
     public Course(int courseId, String courseName) {
-        Course.setCourseId(courseId);
-        Course.setCourseName(courseName);
-        this.teacherName = teacherName;
-        this.studentName = studentName;
+        this.setCourseId(courseId);
+        this.setCourseName(courseName);
+        this.setTeacherName(teacherName);
+        this.setStudentName(studentName);
     }
 
-    public static int getCourseId() {
+    public int getCourseId() {
         return courseId;
     }
 
-    public static void setCourseId(int courseId) {
-        Course.courseId = Course.courseId;
+    public void setCourseId(int courseId) {
+        this.courseId = courseId;
     }
 
-    public static String getCourseName() {
+    public String getCourseName() {
         return courseName;
     }
 
-    public static void setCourseName(String courseName) {
-        Course.courseName = courseName;
+    public void setCourseName(String courseName) {
+        this.courseName = courseName;
+    }
+
+    public String getTeacherName() {
+        return teacherName;
+    }
+
+    public void setTeacherName(String teacherName) {
+        this.teacherName = teacherName;
+    }
+
+    public String getStudentName() {
+        return studentName;
+    }
+
+    public void setStudentName(String studentName) {
+        this.studentName = studentName;
     }
 }
