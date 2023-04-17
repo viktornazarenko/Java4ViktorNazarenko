@@ -13,4 +13,12 @@ public class Homework {
         this.homework = homework;
         count ++;
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getHomework() {
+        return homework;
+    }
 }

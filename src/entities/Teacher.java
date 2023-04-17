@@ -17,4 +17,23 @@ public class Teacher {
         count++;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getCourseName() {
+        return courseName;
+    }
+
+    public static int getCount() {
+        return count;
+    }
 }
