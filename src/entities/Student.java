@@ -19,4 +19,28 @@ public class Student {
         this.courseName = courseName;
         count++;
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public String getCourseName() {
+        return courseName;
+    }
+
+    public static int getCount() {
+        return count;
+    }
 }
