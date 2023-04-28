@@ -2,8 +2,7 @@ package services;
 
 import entities.Student;
 
-import static repository.AdditionalInformationRepo.additionalInformations;
-import static repository.StudentRepo.students;
+import static repository.StudentRepo.getStudents;
 
 public class StudentService extends Student {
 
@@ -13,9 +12,9 @@ public class StudentService extends Student {
 
     public static void printStudents(){
 
-        for (int i = 0; i < students.length; i++) {
-            if (students[i] != null){
-                System.out.println(students[i].getId());
+        for (int i = 0; i < getStudents().length; i++) {
+            if (getStudents()[i] != null){
+                System.out.println(getStudents()[i].getId());
             }
         }
 

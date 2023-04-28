@@ -1,33 +1,19 @@
 package entities;
 
-public class Lecture {
-
-    private int id;
+public class Lecture extends EntitySuper {
 
     private int courseId;
 
     private String courseName;
 
 
-    public static int count = 0;
+    private static int count = 0;
 
 
     public Lecture() {
-        setId(id);
         setCourseId(courseId);
         setCourseName(courseName);
         count ++;
-    }
-
-
-
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public int getCourseId() {
@@ -53,7 +39,7 @@ public class Lecture {
     @Override
     public String toString() {
         return "Lecture{" +
-                "id=" + id +
+                "id=" + getId() +
                 ", courseId=" + courseId +
                 ", courseName='" + courseName + '\'' +
                 '}';

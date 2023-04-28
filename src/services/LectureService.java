@@ -5,14 +5,12 @@ import repository.LectureRepo;
 
 import java.util.Scanner;
 
-import static repository.LectureRepo.lectures;
-
-public class LectureService extends Lecture {
+public class LectureService extends LectureRepo {
 
     static int id = 0;
 
     public static void createLecture() {
-        LectureRepo.createLectureRepo(1);
+        LectureRepo.create(1);
         Lecture lecture = new Lecture();
         System.out.println("Please input lecture ID number");
         Scanner scanner = new Scanner(System.in);
@@ -23,11 +21,11 @@ public class LectureService extends Lecture {
         lecture.setCourseId(courseId);
         System.out.println(lecture);
         LectureRepo.add(lecture);
-        System.out.println("The number of created lectures is " + count);
+        System.out.println("The number of created lectures is " + Lecture.getCount());
     }
 
     public static void createLecture(int courseId) {
-        LectureRepo.createLectureRepo(1);
+        LectureRepo.create(1);
         Lecture lecture = new Lecture();
         System.out.println("Please input lecture ID number");
         Scanner scanner = new Scanner(System.in);
@@ -36,11 +34,11 @@ public class LectureService extends Lecture {
         lecture.setCourseId(courseId);
         System.out.println(lecture);
         LectureRepo.add(lecture);
-        System.out.println("The number of created lectures is " + count);
+        System.out.println("The number of created lectures is " + Lecture.getCount());
     }
 
     public static void createLecture(int courseId, String courseName) {
-        LectureRepo.createLectureRepo(1);
+        LectureRepo.create(1);
         Lecture lecture = new Lecture();
         System.out.println("Please input lecture ID number");
         Scanner scanner = new Scanner(System.in);
@@ -50,11 +48,11 @@ public class LectureService extends Lecture {
         lecture.setCourseName(courseName);
         System.out.println(lecture);
         LectureRepo.add(lecture);
-        System.out.println("The number of created lectures is " + count);
+        System.out.println("The number of created lectures is " + Lecture.getCount());
     }
 
     public static void createLectureSilent(int courseId, String courseName) {
-        LectureRepo.createLectureRepo(1);
+        LectureRepo.create(1);
         Lecture lecture = new Lecture();
         lecture.setId(id);
         lecture.setCourseId(courseId);
@@ -65,9 +63,9 @@ public class LectureService extends Lecture {
 
     public static void printLectures(){
 
-        for (int i = 0; i < lectures.length; i++) {
-            if (lectures[i] != null){
-                System.out.println(lectures[i].getId());
+        for (int i = 0; i < getAll().length; i++) {
+            if (getAll()[i] != null){
+                System.out.println(getAll()[i].getId());
             }
         }
 

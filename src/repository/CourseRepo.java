@@ -6,7 +6,11 @@ import java.util.Arrays;
 
 public class CourseRepo {
 
-    public static Course[] courses;
+    private static Course[] courses;
+
+    public static Course[] getCourses() {
+        return courses;
+    }
 
     public static void createCourseRepo(final int length) {
         if (courses != null && courses.length > 0){
