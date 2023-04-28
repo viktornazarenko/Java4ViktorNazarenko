@@ -2,8 +2,7 @@ package services;
 
 import entities.Homework;
 
-import static repository.AdditionalInformationRepo.additionalInformations;
-import static repository.HomeworkRepo.homeworks;
+import static repository.HomeworkRepo.getHomeworks;
 
 public class HomeworkService extends Homework {
 
@@ -14,9 +13,9 @@ public class HomeworkService extends Homework {
 
     public static void printHomeworks(){
 
-        for (int i = 0; i < homeworks.length; i++) {
-            if (homeworks[i] != null){
-                System.out.println(homeworks[i].getId());
+        for (int i = 0; i < getHomeworks().length; i++) {
+            if (getHomeworks()[i] != null){
+                System.out.println(getHomeworks()[i].getId());
             }
         }
 

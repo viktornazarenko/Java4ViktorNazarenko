@@ -6,7 +6,11 @@ import java.util.Arrays;
 
 public class TeacherRepo {
 
-    public static Teacher[] teachers;
+    private static Teacher[] teachers;
+
+    public static Teacher[] getTeachers() {
+        return teachers;
+    }
 
     public static void createTeacherRepo(final int length) {
         if (teachers != null && teachers.length > 0){

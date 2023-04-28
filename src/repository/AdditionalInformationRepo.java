@@ -6,7 +6,11 @@ import java.util.Arrays;
 
 public class AdditionalInformationRepo {
 
-    public static AdditionalInformation[] additionalInformations;
+    private static AdditionalInformation[] additionalInformations;
+
+    public static AdditionalInformation[] getAdditionalInformations() {
+        return additionalInformations;
+    }
 
     public static void createAdditionalInformationRepo(final int length) {
         if (additionalInformations != null && additionalInformations.length > 0){

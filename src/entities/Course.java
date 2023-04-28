@@ -1,8 +1,6 @@
 package entities;
 
-public class Course {
-
-    private int courseId;
+public class Course extends EntitySuper {
 
     private String courseName;
 
@@ -10,20 +8,13 @@ public class Course {
 
     private String studentName;
 
-    public Course(int courseId, String courseName) {
-        this.setCourseId(courseId);
+    public Course(int id, String courseName) {
+        super(id);
         this.setCourseName(courseName);
         this.setTeacherName(teacherName);
         this.setStudentName(studentName);
     }
 
-    public int getCourseId() {
-        return courseId;
-    }
-
-    public void setCourseId(int courseId) {
-        this.courseId = courseId;
-    }
 
     public String getCourseName() {
         return courseName;

@@ -5,7 +5,11 @@ import java.util.Arrays;
 
 public class StudentRepo {
 
-    public static Student[] students;
+    private static Student[] students;
+
+    public static Student[] getStudents() {
+        return students;
+    }
 
     public static void createStudentRepo(final int length) {
         if (students != null && students.length > 0){

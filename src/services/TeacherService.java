@@ -2,8 +2,7 @@ package services;
 
 import entities.Teacher;
 
-import static repository.AdditionalInformationRepo.additionalInformations;
-import static repository.TeacherRepo.teachers;
+import static repository.TeacherRepo.getTeachers;
 
 public class TeacherService extends Teacher {
 
@@ -13,9 +12,9 @@ public class TeacherService extends Teacher {
 
     public static void printTeachers(){
 
-        for (int i = 0; i < teachers.length; i++) {
-            if (teachers[i] != null){
-                System.out.println(teachers[i].getId());
+        for (int i = 0; i < getTeachers().length; i++) {
+            if (getTeachers()[i] != null){
+                System.out.println(getTeachers()[i].getId());
             }
         }
 

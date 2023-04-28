@@ -1,24 +1,27 @@
 package entities;
 
-public class AdditionalInformation {
-
-    private int id;
+public class AdditionalInformation extends EntitySuper {
 
     private String additionalInformation;
 
-    protected static int count = 0;
+    private static int count = 0;
 
     public AdditionalInformation (int id, String additionalInformation) {
-        this.id = id;
+        super(id);
         this.additionalInformation = additionalInformation;
         count ++;
     }
 
-    public int getId() {
-        return id;
-    }
 
     public String getAdditionalInformation() {
         return additionalInformation;
+    }
+
+    public void setAdditionalInformation(String additionalInformation) {
+        this.additionalInformation = additionalInformation;
+    }
+
+    public static int getCount() {
+        return count;
     }
 }

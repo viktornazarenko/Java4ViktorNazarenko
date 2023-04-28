@@ -6,7 +6,11 @@ import java.util.Arrays;
 
 public class HomeworkRepo {
 
-    public static Homework[] homeworks;
+    private static Homework[] homeworks;
+
+    public static Homework[] getHomeworks() {
+        return homeworks;
+    }
 
     public static void createHomeworkRepo(final int length) {
         if (homeworks != null && homeworks.length > 0){
